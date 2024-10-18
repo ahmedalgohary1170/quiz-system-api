@@ -37,6 +37,8 @@ class QuizSubmissionView(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated]
 
 
+
+
 class GradeSubmissionView(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
         submission = StudentQuizSubmission.objects.get(id=kwargs['submission_id'])
